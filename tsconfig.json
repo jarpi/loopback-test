@@ -1,17 +1,27 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "allowJs": true,
+    "target": "es5",
     "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "experimentalDecorators": true,
     "moduleResolution": "node",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ]
-  }
+    "lib": ["dom", "es2015.promise", "es2015"]
+  },
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
+  "types": [
+    "jasmine",
+    "node",
+    "mocha",
+    "chai"
+  ],
+  "include": [
+    "server/**/*.ts"
+  ],
+  "exclude": [
+    "coverage",
+    "node_modules",
+    "!node_modules/@types"
+  ]
 }
